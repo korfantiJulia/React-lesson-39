@@ -17,9 +17,9 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       // Other configs...
 
@@ -34,13 +34,13 @@ export default defineConfig([
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
   },
-])
+]);
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
@@ -70,4 +70,32 @@ export default defineConfig([
     },
   },
 ])
+
+
+Project Description
+
+This project is a simple React application built with Vite.
+It demonstrates the difference between stateful and stateless components using functional components with React Hooks.
+
+The project includes:
+
+A stateful component that manages and updates state using useState
+A stateless component that receives props and displays data
+
+Installation
+
+Create project:
+npm create vite@latest my-react-app -- --template react-ts
+
+Install dependencies:
+npm install
+
+Start the development server:
+npm run dev
+
+Then open your browser and go to:
+http://localhost:5173
+
+
+Live demo is available here:
 ```

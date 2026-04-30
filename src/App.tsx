@@ -1,11 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import heroImg from "./assets/hero.png";
+import "./App.css";
+// import { Card } from "./components/StatelessComponent/Card";
+import { ButtonAddCard } from "./components/StatefulComponent/ButtonAddCard";
 
-function App() {
-  const [count, setCount] = useState(0)
+// import htmlLogo from "./assets/HTML5-logo.jpg";
+// import cssLogo from "./assets/CSS-logo.png";
+// import jsLogo from "./assets/JS-logo.jpg";
+
+export function App() {
+  const [count, setCount] = useState(0);
+
+  // const cards = [
+  //   {
+  //     id: 1,
+  //     title: "HTML5",
+  //     description: "Description 1",
+  //     image: htmlLogo,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "CSS",
+  //     description: "Description 2",
+  //     image: cssLogo,
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "JS",
+  //     description: "Description 3",
+  //     image: jsLogo,
+  //   },
+  // ];
 
   return (
     <>
@@ -29,6 +56,19 @@ function App() {
           Count is {count}
         </button>
       </section>
+
+      {/* <div className="cards-container">
+        {cards.map((card) => (
+          <Card
+            key={card.id}
+            title={card.title}
+            description={card.description}
+            image={card.image}
+          />
+        ))}
+      </div> */}
+
+      <ButtonAddCard />
 
       <div className="ticks"></div>
 
@@ -116,7 +156,5 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
+  );
 }
-
-export default App
